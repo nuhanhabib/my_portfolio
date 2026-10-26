@@ -450,10 +450,10 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       <div class="pic"><img src="img/headshot.webp" alt="Nuhan Habib" loading="lazy"></div>
       <div class="meta"><span>Nuhan Habib</span><span>Developer · Dhaka</span></div>
       <dl class="stats">
-        <div><dt class="sr-only">GitHub projects</dt><dd class="v" data-count="7">7</dd><dd class="k">Projects on GitHub</dd></div>
-        <div><dt class="sr-only">GPA</dt><dd class="v" data-count="5" data-dec="2">5.00</dd><dd class="k">GPA · SSC &amp; HSC</dd></div>
+        <div><dt class="sr-only">Projects</dt><dd class="v" data-count="10" data-suffix="+">10+</dd><dd class="k">Projects</dd></div>
+        <div><dt class="sr-only">Stack</dt><dd class="v">MERN</dd><dd class="k">Expert</dd></div>
         <div><dt class="sr-only">Roles</dt><dd class="v" data-count="3">3</dd><dd class="k">Work &amp; internship roles</dd></div>
-        <div><dt class="sr-only">Ideathon</dt><dd class="v">2025</dd><dd class="k">Ideathon finalist</dd></div>
+        <div><dt class="sr-only">Experience</dt><dd class="v" data-count="1" data-suffix="+">1+</dd><dd class="k">Year of experience</dd></div>
       </dl>
     </aside>
     <div>
@@ -734,7 +734,7 @@ $$('.reveal').forEach((el,i)=>{
 const cio=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;cio.unobserve(e.target);
   const el=e.target,to=+el.dataset.count,dec=+(el.dataset.dec||0),t0=performance.now(),D=reduce?1:1400;
-  const step=t=>{const k=clamp((t-t0)/D,0,1),v=to*(1-Math.pow(1-k,4));el.innerHTML=v.toFixed(dec);if(k<1)requestAnimationFrame(step)};
+  const step=t=>{const k=clamp((t-t0)/D,0,1),v=to*(1-Math.pow(1-k,4));el.textContent=v.toFixed(dec)+(el.dataset.suffix||'');if(k<1)requestAnimationFrame(step)};
   requestAnimationFrame(step);
 }),{threshold:.6});
 $$('[data-count]').forEach(el=>cio.observe(el));
