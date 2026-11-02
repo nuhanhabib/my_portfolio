@@ -269,6 +269,44 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
 .proj p{font-size:.9rem;color:var(--ink-2);margin-top:.5rem}
 .proj .nolink{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.6rem}
 
+/* ---------- featured spotlight ---------- */
+.spot-feat{position:relative;isolation:isolate;overflow:hidden;display:grid;gap:2.5rem;align-items:center;margin-top:2.75rem;border-radius:var(--r-lg);border:1px solid rgba(167,139,250,.28);padding:clamp(1.5rem,4.5vw,3.5rem);background:radial-gradient(40rem 26rem at 100% 0%,rgba(124,58,237,.38),transparent 65%),radial-gradient(30rem 24rem at 0% 100%,rgba(87,144,230,.22),transparent 65%),linear-gradient(160deg,#120f2e,#0b1022 60%,#0a0f1f)}
+.spot-feat::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1.5px);background-size:46px 46px;opacity:.12;mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%)}
+@media (min-width:960px){.spot-feat{grid-template-columns:1.25fr .75fr;gap:3.5rem}}
+.spot-feat .tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.spot-feat .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;border-radius:var(--pill);padding:.4rem .8rem;border:1px solid rgba(167,139,250,.35);color:#d8ccff}
+.spot-feat .tag.star{background:linear-gradient(90deg,#7c3aed,var(--brand));border-color:transparent;color:#fff}
+.spot-feat .tag.new{border-color:rgba(61,220,132,.45);color:var(--ok)}
+.spot-feat h3{display:flex;align-items:center;gap:.9rem;font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.04em;line-height:1;margin-top:1.4rem}
+.spot-feat h3 .emo{font-size:.75em}
+.spot-feat .line{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.2vw,1.6rem);color:#c4b5fd;margin-top:.9rem;line-height:1.3}
+.spot-feat .desc{color:var(--ink-2);margin-top:1.25rem;max-width:40rem}
+.feats{display:grid;gap:.6rem 1.5rem;margin-top:1.75rem}
+@media (min-width:560px){.feats{grid-template-columns:1fr 1fr}}
+.feats li{display:flex;gap:.65rem;align-items:flex-start;font-size:.92rem;color:var(--ink)}
+.feats li i{flex:none;font-style:normal;width:1.6rem;height:1.6rem;border-radius:.5rem;display:grid;place-items:center;background:rgba(124,58,237,.22);font-size:.85rem}
+.spot-feat .stackline{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem}
+.spot-feat .stackline span{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);background:rgba(255,255,255,.04);border:1px solid var(--line-2);border-radius:.5rem;padding:.3rem .6rem}
+.spot-feat .ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.spot-feat .btn.violet{background:linear-gradient(90deg,#7c3aed,#5b5bf0);color:#fff;box-shadow:0 12px 30px -12px rgba(124,58,237,.7),inset 0 1px 0 rgba(255,255,255,.25)}
+.spot-feat .btn.violet:hover{box-shadow:0 16px 40px -10px rgba(124,58,237,.85),inset 0 1px 0 rgba(255,255,255,.25)}
+.spot-feat .btn svg{width:1rem;height:1rem}
+.phone{position:relative;justify-self:center;width:min(100%,17.5rem);aspect-ratio:9/19;border-radius:2.6rem;padding:.6rem;background:linear-gradient(145deg,#2a2550,#0c0b1c);box-shadow:0 0 0 1px rgba(167,139,250,.3),0 40px 80px -30px rgba(0,0,0,.9),0 0 90px -20px rgba(124,58,237,.6)}
+.phone::before{content:"";position:absolute;top:1.1rem;left:50%;width:4.5rem;height:1.1rem;border-radius:var(--pill);background:#05050d;transform:translateX(-50%);z-index:2}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:2.05rem;overflow:hidden;background:#1a1240}
+.phone video{width:100%;height:100%;object-fit:cover;display:block}
+.phone .snd{position:absolute;right:.6rem;top:2.4rem;z-index:3;display:flex;align-items:center;gap:.35rem;border-radius:var(--pill);padding:.35rem .6rem;font-size:.68rem;font-weight:500;color:#fff;background:rgba(10,8,30,.65);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background-color .2s}
+.phone .snd:hover{background:rgba(124,58,237,.75)}
+.phone .snd svg{width:.95rem;height:.95rem}
+.phone .play{position:absolute;inset:0;z-index:2;display:none;place-items:center;background:rgba(10,8,30,.35)}
+.phone .play span{display:grid;place-items:center;width:3.75rem;height:3.75rem;border-radius:50%;background:#fff;color:#4c1d95}
+.phone .play svg{width:1.4rem;height:1.4rem;margin-left:3px}
+.phone.paused .play{display:grid}
+.phone .float-chip{position:absolute;z-index:3;left:-2.25rem;top:22%;display:flex;align-items:center;gap:.5rem;border-radius:1rem;padding:.55rem .8rem;background:rgba(14,11,40,.85);border:1px solid rgba(167,139,250,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:.75rem;color:var(--ink-2);box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+.phone .float-chip b{font-family:var(--display);font-size:1.15rem;color:#fff}
+.phone .float-chip.r{left:auto;right:-2rem;top:auto;bottom:24%}
+@media (max-width:520px){.phone .float-chip{left:-.75rem}.phone .float-chip.r{right:-.75rem}}
+
 /* ---------- skills ---------- */
 .skills{padding-block:clamp(5rem,10vw,8rem);border-top:1px solid var(--line)}
 .skills-grid{display:grid;gap:2rem;margin-top:3rem}
@@ -511,6 +549,36 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       </div>
       <p class="sub reveal">Web, AI and everything in between.</p>
     </div>
+    <article class="spot-feat reveal" aria-labelledby="dozy-title">
+      <div>
+        <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● New</span><span class="tag">Android app</span></div>
+        <h3 id="dozy-title">DozyPal <span class="emo" aria-hidden="true">😴</span></h3>
+        <p class="line">A sleepy little pal who gets droopier with every reel you scroll.</p>
+        <p class="desc">A free, open-source Android app that counts the reels you watch on Facebook, Instagram, TikTok and YouTube Shorts. A tiny counter sits on the edge of your screen, and your DozyPal gets sleepier with every reel, all the way to zombie mode.</p>
+        <ul class="feats">
+          <li><i aria-hidden="true">⏱️</i>Counts a reel after 3 seconds, skips ads</li>
+          <li><i aria-hidden="true">🫧</i>Floating counter on the screen edge</li>
+          <li><i aria-hidden="true">⏰</i>Daily limit with gentle reminders</li>
+          <li><i aria-hidden="true">📊</i>Daily, weekly and monthly reports</li>
+          <li><i aria-hidden="true">⚔️</i>Scroll Battles: fewest reels wins</li>
+          <li><i aria-hidden="true">🔒</i>Works offline. No ads, no tracking</li>
+        </ul>
+        <div class="stackline" aria-label="Tech stack"><span>Kotlin</span><span>Android Accessibility Service</span><span>Firebase Auth + Firestore</span><span>GitHub Actions CI</span></div>
+        <div class="ctas">
+          <a class="btn violet" href="https://github.com/nuhanhabib/DozyPal/releases/latest" target="_blank" rel="noopener">Download APK <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span></a>
+          <a class="btn ghost" href="https://github.com/nuhanhabib/DozyPal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>Source on GitHub</a>
+        </div>
+      </div>
+      <div class="phone" id="dozy-phone">
+        <div class="scr">
+          <video id="dozy-video" src="media/dozypal-promo.mp4" poster="img/dozypal-poster.webp" muted loop playsinline preload="metadata" aria-label="DozyPal promo video"></video>
+          <button class="play" type="button" id="dozy-play" aria-label="Play video"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span></button>
+          <button class="snd" type="button" id="dozy-snd" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg><span>Sound off</span></button>
+        </div>
+        <div class="float-chip" aria-hidden="true"><b>9</b>moods</div>
+        <div class="float-chip r" aria-hidden="true"><b>4</b>apps tracked</div>
+      </div>
+    </article>
     <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
     <ul class="grid" id="grid"></ul>
   </div>
@@ -529,6 +597,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
   <span class="p">"web"</span>:          [<span class="s">"PHP"</span>, <span class="s">"MySQL"</span>, <span class="s">"HTML"</span>, <span class="s">"CSS"</span>],
   <span class="p">"languages"</span>:    [<span class="s">"Python"</span>, <span class="s">"C"</span>, <span class="s">"SQL"</span>],
   <span class="p">"ai_ml"</span>:        [<span class="s">"Machine Learning"</span>, <span class="s">"Computer Vision"</span>],
+  <span class="p">"mobile"</span>:       [<span class="s">"Kotlin"</span>, <span class="s">"Android"</span>, <span class="s">"Firebase"</span>],
   <span class="p">"graphics"</span>:     [<span class="s">"PyOpenGL"</span>, <span class="s">"Tkinter"</span>],
   <span class="p">"data"</span>:         [<span class="s">"Excel"</span>, <span class="s">"Power BI"</span>],
   <span class="p">"tools"</span>:        [<span class="s">"Git"</span>, <span class="s">"GitHub"</span>],
@@ -539,7 +608,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       <div class="side-cards">
         <div class="mini reveal">
           <h3>Core stack</h3>
-          <div class="chips"><span>PHP</span><span>MySQL</span><span>Python</span><span>HTML / CSS</span><span>SQL</span><span>C</span><span>Machine Learning</span><span>Computer Vision</span><span>Power BI</span><span>Git &amp; GitHub</span></div>
+          <div class="chips"><span>PHP</span><span>MySQL</span><span>Python</span><span>Kotlin</span><span>Android</span><span>Firebase</span><span>HTML / CSS</span><span>SQL</span><span>C</span><span>Machine Learning</span><span>Computer Vision</span><span>Power BI</span><span>Git &amp; GitHub</span></div>
         </div>
         <div class="mini reveal">
           <h3>Certifications</h3>
@@ -648,8 +717,9 @@ $$('[data-socials]').forEach(box=>{
 
 /* ------------------------------------------------------------------ data */
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
-const CATS={web:'Web apps',ai:'AI & Research',games:'Games & 3D',desktop:'Desktop'};
+const CATS={mobile:'Android',web:'Web apps',ai:'AI & Research',games:'Games & 3D',desktop:'Desktop'};
 const projects=[
+  {n:'DozyPal',c:'mobile',f:1,st:'Kotlin · Android',url:'DozyPal · Android app',d:'A free, open-source Android app that counts the reels you watch, with a sleepy character, daily limits, reports and Scroll Battles with friends.',h:'https://github.com/nuhanhabib/DozyPal',img:'img/dozypal.webp'},
   {n:'SafeVault',c:'web',f:1,st:'JavaScript · Web Crypto · PWA',url:'nuhanhabib.github.io/safevault',d:'An installable, zero-knowledge password manager: AES-256-GCM encryption on your device, one master password, auto-lock and private sync through your own Google Drive.',h:'https://github.com/nuhanhabib/safevault',svg:'vault'},
   {n:'ReadSphere',c:'web',f:1,st:'PHP · MySQL',url:'localhost/readsphere',d:'A book-community web app with a library, book clubs, a personal bookshelf, reading goals and recommendations.',h:'https://github.com/nuhanhabib/ReadSphere-project',img:'img/readsphere.webp'},
   {n:'Crowd Density Estimation',c:'ai',f:1,st:'Python · CV',d:'Undergraduate thesis: a CSRNet++ pipeline with CBAM attention that produces real-time crowd density maps.',h:null,svg:'crowd'},
@@ -695,7 +765,7 @@ function cricketSVG(){
 const ILL={crowd:crowdSVG,food:foodSVG,ball:ballSVG,vault:vaultSVG,cricket:cricketSVG};
 
 /* ------------------------------------------------------------------ marquee + strip */
-const words=['PHP','MySQL','Python','Machine Learning','Computer Vision','OpenGL','SQL','Web Apps'];
+const words=['PHP','Kotlin','Android','MySQL','Python','Machine Learning','Computer Vision','OpenGL','SQL','Web Apps'];
 const mqHTML=words.map((w,i)=>`<span class="${i%3===0?'f':''}">${w}</span><span class="sep">✦</span>`).join('');
 $('#mq').innerHTML=mqHTML+mqHTML;
 const shots=projects.filter(p=>p.img||p.svg);
@@ -830,6 +900,26 @@ form.addEventListener('submit',e=>{
   $('#ok-text').innerHTML=`Thanks, ${(name.split(' ')[0])||'there'}. Your email app should open with the message ready to send. If nothing opens, write to <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
   ok.classList.add('show');
 });
+/* ------------------------------------------------------------------ DozyPal video */
+(function(){
+  const v=$('#dozy-video'),ph=$('#dozy-phone'),snd=$('#dozy-snd'),pl=$('#dozy-play');
+  let inView=false,userPaused=false;
+  const sync=()=>ph.classList.toggle('paused',v.paused);
+  const tryPlay=()=>{const p=v.play();p&&p.catch(()=>{});};
+  v.addEventListener('play',sync);v.addEventListener('pause',sync);
+  if(reduce)userPaused=true;
+  new IntersectionObserver(es=>es.forEach(e=>{inView=e.isIntersecting;if(inView&&!userPaused)tryPlay();else if(!inView)v.pause()}),{threshold:.35}).observe(ph);
+  pl.onclick=()=>{userPaused=false;tryPlay()};
+  v.onclick=()=>{if(v.paused){userPaused=false;tryPlay()}else{userPaused=true;v.pause()}};
+  snd.onclick=()=>{
+    v.muted=!v.muted;snd.setAttribute('aria-pressed',String(!v.muted));
+    snd.querySelector('span').textContent=v.muted?'Sound off':'Sound on';
+    snd.querySelector('svg').innerHTML=v.muted?'<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/>':'<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>';
+    if(!v.muted){userPaused=false;tryPlay()}
+  };
+  sync();
+})();
+
 addEventListener('keydown',e=>{if(e.key==='Escape'){if(modalOpen)closeModal();else if(menuOpen)closeMenu()}});
 
 /* ------------------------------------------------------------------ entrance */
