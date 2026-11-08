@@ -294,6 +294,8 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
 .spot-feat{--c1:#7c3aed;--c2:#5b5bf0;--rgb:124,58,237;--soft:#c4b5fd;--tagc:#d8ccff;--bg1:#120f2e;--scr:#1a1240}
 .spot-feat.blue{--c1:#2563eb;--c2:#7c5cff;--rgb:59,111,255;--soft:#a9c3ff;--tagc:#cfdcff;--bg1:#0c1636;--scr:#0f1a3d}
 .feat-tabs button.blue{--c1:#2563eb;--c2:#7c5cff}
+.spot-feat.green{--c1:#16a34a;--c2:#65a30d;--rgb:34,197,94;--soft:#a7f3c0;--tagc:#d1fae5;--bg1:#0b2414;--scr:#0f2a18}
+.feat-tabs button.green{--c1:#16a34a;--c2:#65a30d}
 .feat-tabs button{--c1:#7c3aed;--c2:#5b5bf0}
 .spot-feat{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;isolation:isolate;overflow:hidden;display:grid;gap:2.5rem;align-items:center;border-radius:var(--r-lg);border:1px solid rgba(var(--rgb),.32);padding:clamp(1.5rem,4.5vw,3.5rem);background:radial-gradient(40rem 26rem at 100% 0%,rgba(var(--rgb),.38),transparent 65%),radial-gradient(30rem 24rem at 0% 100%,rgba(87,144,230,.22),transparent 65%),linear-gradient(160deg,var(--bg1),#0b1022 60%,#0a0f1f)}
 @media (max-width:700px){.spot-feat{flex-basis:calc(100% - 1.5rem)}}
@@ -577,7 +579,37 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
     </div>
     <div class="feat-car reveal" id="feat-car" aria-roledescription="carousel" aria-label="Featured projects">
     <div class="feat-track" id="feat-track" tabindex="0">
-    <article class="spot-feat" data-name="DozyPal" aria-roledescription="slide" aria-label="1 of 2: DozyPal">
+    <article class="spot-feat green" data-name="Khabo Ki?" aria-roledescription="slide" aria-label="1 of 3: Khabo Ki?">
+      <div>
+        <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● New</span><span class="tag">Android app · AI</span></div>
+        <h3>Khabo Ki? <span class="emo" aria-hidden="true">🍎</span></h3>
+        <p class="line">Eat like a Boss, not like a Victim.</p>
+        <p class="desc">Your AI-powered pocket food detective, built for Bangladesh. Point the camera at food and it tells you what it is, whether it looks fresh, a safety score from 0 to 100, nutrition and a budget tip in taka, in English and Bangla. It grew out of our Next Gen Ideathon 2025 finalist idea.</p>
+        <ul class="feats">
+          <li><i aria-hidden="true">📸</i>Snap a photo or pick one from the gallery</li>
+          <li><i aria-hidden="true">💯</i>Safety score from 0 to 100, plus freshness</li>
+          <li><i aria-hidden="true">⚠️</i>Spots spoilage risks like mould</li>
+          <li><i aria-hidden="true">🥦</i>Nutrition and portion estimate</li>
+          <li><i aria-hidden="true">💸</i>Budget tip in taka</li>
+          <li><i aria-hidden="true">🗂️</i>Every scan saved, in English and Bangla</li>
+        </ul>
+        <div class="stackline" aria-label="Tech stack"><span>Flutter (Dart)</span><span>Google Gemini</span><span>Cloudflare Workers (TypeScript)</span><span>GitHub Actions CI</span></div>
+        <div class="ctas">
+          <a class="btn acc" href="https://github.com/nuhanhabib/khabo-ki/releases/latest" target="_blank" rel="noopener">Download APK <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span></a>
+          <a class="btn ghost" href="https://github.com/nuhanhabib/khabo-ki" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>Source on GitHub</a>
+        </div>
+      </div>
+      <div class="phone">
+        <div class="scr">
+          <video src="media/khaboki-promo.mp4" poster="img/khaboki-poster.webp" muted loop playsinline preload="metadata" aria-label="Khabo Ki promo video"></video>
+          <button class="play" type="button" aria-label="Play video"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span></button>
+          <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg><span>Sound off</span></button>
+        </div>
+        <div class="float-chip" aria-hidden="true"><b>0–100</b>safety score</div>
+        <div class="float-chip r" aria-hidden="true"><b>2</b>languages</div>
+      </div>
+    </article>
+    <article class="spot-feat" data-name="DozyPal" aria-roledescription="slide" aria-label="2 of 3: DozyPal">
       <div>
         <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● New</span><span class="tag">Android app</span></div>
         <h3 id="dozy-title">DozyPal <span class="emo" aria-hidden="true">😴</span></h3>
@@ -599,7 +631,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       </div>
       <div class="phone">
         <div class="scr">
-          <video src="media/dozypal-promo.mp4" poster="img/dozypal-poster.webp" muted loop playsinline preload="metadata" aria-label="DozyPal promo video"></video>
+          <video src="media/dozypal-promo.mp4" poster="img/dozypal-poster.webp" muted loop playsinline preload="none" aria-label="DozyPal promo video"></video>
           <button class="play" type="button" aria-label="Play video"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span></button>
           <button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg><span>Sound off</span></button>
         </div>
@@ -607,7 +639,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
         <div class="float-chip r" aria-hidden="true"><b>4</b>apps tracked</div>
       </div>
     </article>
-    <article class="spot-feat blue" data-name="SafeVault" aria-roledescription="slide" aria-label="2 of 2: SafeVault">
+    <article class="spot-feat blue" data-name="SafeVault" aria-roledescription="slide" aria-label="3 of 3: SafeVault">
       <div>
         <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● Live</span><span class="tag">Web app · PWA</span></div>
         <h3 id="vault-title">SafeVault <span class="emo" aria-hidden="true">🔐</span></h3>
@@ -662,10 +694,10 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
         <div class="bar"><i></i><i></i><i></i><span>nuhan@habib: ~/toolkit</span></div>
 <pre><span class="pr">nuhan@habib</span>:<span class="pa">~</span>$ cat toolkit.json
 {
-  <span class="p">"web"</span>:          [<span class="s">"PHP"</span>, <span class="s">"MySQL"</span>, <span class="s">"HTML"</span>, <span class="s">"CSS"</span>],
-  <span class="p">"languages"</span>:    [<span class="s">"Python"</span>, <span class="s">"C"</span>, <span class="s">"SQL"</span>],
+  <span class="p">"web"</span>:          [<span class="s">"Next.js"</span>, <span class="s">"React"</span>, <span class="s">"Tailwind"</span>, <span class="s">"PHP"</span>, <span class="s">"MySQL"</span>],
+  <span class="p">"languages"</span>:    [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Dart"</span>, <span class="s">"C"</span>, <span class="s">"SQL"</span>],
   <span class="p">"ai_ml"</span>:        [<span class="s">"Machine Learning"</span>, <span class="s">"Computer Vision"</span>],
-  <span class="p">"mobile"</span>:       [<span class="s">"Kotlin"</span>, <span class="s">"Android"</span>, <span class="s">"Firebase"</span>],
+  <span class="p">"mobile"</span>:       [<span class="s">"Flutter"</span>, <span class="s">"Kotlin"</span>, <span class="s">"Android"</span>, <span class="s">"Firebase"</span>],
   <span class="p">"graphics"</span>:     [<span class="s">"PyOpenGL"</span>, <span class="s">"Tkinter"</span>],
   <span class="p">"data"</span>:         [<span class="s">"Excel"</span>, <span class="s">"Power BI"</span>],
   <span class="p">"tools"</span>:        [<span class="s">"Git"</span>, <span class="s">"GitHub"</span>],
@@ -676,7 +708,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       <div class="side-cards">
         <div class="mini reveal">
           <h3>Core stack</h3>
-          <div class="chips"><span>PHP</span><span>MySQL</span><span>Python</span><span>Kotlin</span><span>Android</span><span>Firebase</span><span>HTML / CSS</span><span>SQL</span><span>C</span><span>Machine Learning</span><span>Computer Vision</span><span>Power BI</span><span>Git &amp; GitHub</span></div>
+          <div class="chips"><span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>Flutter</span><span>PHP</span><span>MySQL</span><span>Python</span><span>Kotlin</span><span>Android</span><span>Firebase</span><span>HTML / CSS</span><span>SQL</span><span>C</span><span>Machine Learning</span><span>Computer Vision</span><span>Power BI</span><span>Git &amp; GitHub</span></div>
         </div>
         <div class="mini reveal">
           <h3>Certifications</h3>
@@ -787,15 +819,16 @@ $$('[data-socials]').forEach(box=>{
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
 const CATS={mobile:'Android',web:'Web apps',ai:'AI & Research',games:'Games & 3D',desktop:'Desktop'};
 const projects=[
+  {n:'Khabo Ki?',c:'mobile',f:1,st:'Flutter · Gemini AI',url:'Khabo Ki? · Android app',d:'An AI food detective for Bangladesh: snap a photo and get a 0–100 safety score, freshness, nutrition and a budget tip, in English and Bangla. Grew out of our Ideathon 2025 finalist idea.',h:'https://github.com/nuhanhabib/khabo-ki',img:'img/khaboki.webp'},
   {n:'DozyPal',c:'mobile',f:1,st:'Kotlin · Android',url:'DozyPal · Android app',d:'A free, open-source Android app that counts the reels you watch, with a sleepy character, daily limits, reports and Scroll Battles with friends.',h:'https://github.com/nuhanhabib/DozyPal',img:'img/dozypal.webp'},
   {n:'SafeVault',c:'web',f:1,st:'JavaScript · Web Crypto · PWA',url:'nuhanhabib.github.io/safevault',d:'An installable, zero-knowledge password manager: AES-256-GCM encryption on your device, one master password, auto-lock and private sync through your own Google Drive.',h:'https://github.com/nuhanhabib/safevault',img:'img/safevault.webp'},
+  {n:'AltaFit',c:'web',f:1,st:'Next.js · React · Tailwind',url:'altafit · gym website',d:'A multi-page gym website built from a Figma design: classes, gallery, membership plans, mentors and a free-trial booking form. Built with Next.js 16, React 19 and Tailwind CSS 4.',h:'https://github.com/nuhanhabib/Gym-Fitness-Website',img:'img/altafit.webp'},
   {n:'ReadSphere',c:'web',f:1,st:'PHP · MySQL',url:'localhost/readsphere',d:'A book-community web app with a library, book clubs, a personal bookshelf, reading goals and recommendations.',h:'https://github.com/nuhanhabib/ReadSphere-project',img:'img/readsphere.webp'},
   {n:'Crowd Density Estimation',c:'ai',f:1,st:'Python · CV',d:'Undergraduate thesis: a CSRNet++ pipeline with CBAM attention that produces real-time crowd density maps.',h:null,svg:'crowd'},
   {n:'Inventory Management System',c:'web',f:1,st:'PHP · MySQL',url:'localhost/inventory',d:'A dashboard for stock in and out, suppliers, reports and low-stock alerts, with searchable inventory tables.',h:'https://github.com/nuhanhabib/inventory-management-project',img:'img/inventory.webp'},
   {n:'The Modern Barber',c:'web',f:1,st:'PHP · HTML/CSS',url:'localhost/modern-barber',d:'A barbershop website with services, barbers, products and online appointment booking by date, time and barber.',h:'https://github.com/nuhanhabib/the-modern-barber-project',img:'img/barber.webp'},
   {n:'Counter King',c:'games',st:'Python · PyOpenGL',url:'counter_king.py',d:'A 3D siege defense game with procedural weather, automated intro sequences and dynamic perspective switching.',h:'https://github.com/nuhanhabib/Counter_King_Game',img:'img/counterking.webp'},
   {n:'Unsupervised Music Generation',c:'ai',st:'Python · Deep Learning',url:'music_generation.ipynb',d:'LSTM Autoencoder, VAE and Transformer models compared on the MAESTRO dataset, documented in an IEEE-format report.',h:'https://github.com/nuhanhabib/music-generation-unsupervised',img:'img/music.webp'},
-  {n:'Khabo Ki?',c:'ai',st:'AI concept',d:'Next Gen Ideathon 2025 finalist: an AI food-safety concept that estimates freshness, nutrition and a safety score from a photo.',h:null,svg:'food'},
   {n:'Clock Design',c:'desktop',st:'Python · Tkinter',url:'clock_design.py',d:'A customizable desktop clock with themes, adjustable hand speed and glow, timezones and design presets.',h:'https://github.com/nuhanhabib/Clock_Design',img:'img/clock.webp'},
   {n:'Hand Cricket',c:'games',url:'localhost/hand-cricket',st:'TypeScript · Vite',d:'The classic finger-counting cricket game in the browser: toss, bat and bowl against a computer opponent, with sound and light/dark themes.',h:'https://github.com/nuhanhabib/hand-cricket-game',svg:'cricket'},
   {n:'X Ball Game',c:'games',st:'Python',d:'A small ball game written in Python. The source code is on GitHub.',h:'https://github.com/nuhanhabib/x_ball_game',svg:'ball'}
@@ -817,9 +850,6 @@ function crowdSVG(){
   for(let i=0;i<280;i++){const c=cs[i%4];const a=r()*6.283,d=Math.sqrt(r());dots+=`<circle cx="${(c[0]+Math.cos(a)*c[2]*d).toFixed(1)}" cy="${(c[1]+Math.sin(a)*c[3]*d).toFixed(1)}" r="${(.9+r()*.9).toFixed(1)}" fill-opacity="${(.45+r()*.5).toFixed(2)}"/>`}
   return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a crowd density heat map"><defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11306a"/><stop offset="1" stop-color="#081530"/></linearGradient><radialGradient id="ht"><stop offset="0" stop-color="#ff5a3c" stop-opacity=".95"/><stop offset=".35" stop-color="#ffb43c" stop-opacity=".7"/><stop offset=".7" stop-color="#37c8ff" stop-opacity=".28"/><stop offset="1" stop-color="#37c8ff" stop-opacity="0"/></radialGradient></defs><rect width="400" height="250" fill="url(#cg)"/><g stroke="#5790e6" stroke-opacity=".18" stroke-width=".6"><path d="M0 50h400M0 100h400M0 150h400M0 200h400M50 0v250M100 0v250M150 0v250M200 0v250M250 0v250M300 0v250M350 0v250"/></g><ellipse cx="150" cy="110" rx="95" ry="65" fill="url(#ht)"/><ellipse cx="300" cy="165" rx="85" ry="58" fill="url(#ht)"/><ellipse cx="110" cy="200" rx="65" ry="42" fill="url(#ht)" opacity=".8"/><ellipse cx="330" cy="75" rx="55" ry="36" fill="url(#ht)" opacity=".7"/><g fill="#fff">${dots}</g><text x="18" y="232" fill="#cfe2ff" font-size="10" letter-spacing="1.5" font-family="ui-monospace,Menlo,monospace">DENSITY MAP · CSRNET++</text></svg>`;
 }
-function foodSVG(){
-  return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a food photo with freshness, nutrition and safety score rings"><defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b6e97"/><stop offset="1" stop-color="#0a1d44"/></linearGradient></defs><rect width="400" height="250" fill="url(#fg)"/><circle cx="350" cy="30" r="110" fill="#fff" fill-opacity=".05"/><circle cx="120" cy="125" r="70" fill="#f4f4f4"/><circle cx="120" cy="125" r="56" fill="#e6e8ec"/><circle cx="100" cy="112" r="20" fill="#c2e029"/><circle cx="140" cy="108" r="17" fill="#ff7a3c"/><circle cx="120" cy="146" r="18" fill="#e8413a"/><path d="M86 136q12-16 26-5" stroke="#2f8f4e" stroke-width="6" fill="none" stroke-linecap="round"/><g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#fff" fill-opacity=".85" text-anchor="middle"><g transform="translate(250 105)"><circle r="22" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="5"/><circle r="22" fill="none" stroke="#c2e029" stroke-width="5" stroke-linecap="round" stroke-dasharray="114 138" transform="rotate(-90)"/><text y="44">FRESH</text></g><g transform="translate(310 105)"><circle r="22" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="5"/><circle r="22" fill="none" stroke="#8db8ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="96 138" transform="rotate(-90)"/><text y="44">NUTRI</text></g><g transform="translate(370 105)"><circle r="22" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="5"/><circle r="22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="105 138" transform="rotate(-90)"/><text y="44">SAFE</text></g></g><text x="18" y="232" fill="#fff" fill-opacity=".6" font-size="10" letter-spacing="1.5" font-family="ui-monospace,Menlo,monospace">ILLUSTRATION · KHABO KI?</text></svg>`;
-}
 function ballSVG(){
   return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a bouncing ball game"><defs><radialGradient id="bg2" cx=".3" cy=".3"><stop offset="0" stop-color="#8db8ff"/><stop offset="1" stop-color="#2f6fd6"/></radialGradient></defs><rect width="400" height="250" fill="#0a1020"/><g stroke="#5790e6" stroke-opacity=".12"><path d="M0 50h400M0 100h400M0 150h400M0 200h400M80 0v250M160 0v250M240 0v250M320 0v250"/></g><path d="M40 200 Q110 40 180 200 Q230 90 280 200 Q310 140 340 200" fill="none" stroke="#5790e6" stroke-opacity=".45" stroke-width="2" stroke-dasharray="4 6"/><circle cx="340" cy="186" r="14" fill="url(#bg2)"/><rect x="300" y="204" width="80" height="8" rx="4" fill="#eef3fc"/><g font-family="ui-monospace,Menlo,monospace" font-size="11"><text x="18" y="28" fill="#7d89a3">x_ball_game.py</text><text x="18" y="232" fill="#c792ea">while<tspan fill="#eef3fc"> running:</tspan></text></g></svg>`;
 }
@@ -827,10 +857,10 @@ function cricketSVG(){
   const hand=(x,n,c)=>`<g transform="translate(${x} 120)"><rect x="-34" y="-10" width="68" height="62" rx="18" fill="${c}"/>${[...Array(5)].map((_,i)=>`<rect x="${-30+i*13}" y="${i<n?-58:-22}" width="10" height="${i<n?54:18}" rx="5" fill="${c}"/>`).join('')}</g>`;
   return `<svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a hand cricket match"><rect width="400" height="250" fill="#0b2a1c"/><ellipse cx="200" cy="260" rx="260" ry="120" fill="#13432c"/><rect x="186" y="150" width="28" height="100" fill="#c9b27a" fill-opacity=".35"/>${hand(110,3,'#eef3fc')}${hand(290,5,'#8db8ff')}<text x="200" y="112" text-anchor="middle" fill="#ffb43c" font-size="20" font-weight="700" font-family="ui-monospace,Menlo,monospace">VS</text><circle cx="200" cy="70" r="9" fill="#d23c3c"/><path d="M193 66 Q200 70 207 66 M193 74 Q200 70 207 74" stroke="#fff" stroke-opacity=".7" fill="none"/><g font-family="ui-monospace,Menlo,monospace"><rect x="14" y="14" width="120" height="28" rx="6" fill="#000" fill-opacity=".35"/><text x="24" y="33" fill="#eef3fc" font-size="13">YOU 42/1</text><text x="266" y="33" fill="#eef3fc" fill-opacity=".7" font-size="11">OVER 3.4</text></g><text x="18" y="232" fill="#fff" fill-opacity=".6" font-size="10" letter-spacing="1.5" font-family="ui-monospace,Menlo,monospace">ILLUSTRATION · HAND CRICKET</text></svg>`;
 }
-const ILL={crowd:crowdSVG,food:foodSVG,ball:ballSVG,cricket:cricketSVG};
+const ILL={crowd:crowdSVG,ball:ballSVG,cricket:cricketSVG};
 
 /* ------------------------------------------------------------------ marquee + strip */
-const words=['PHP','Kotlin','Android','MySQL','Python','Machine Learning','Computer Vision','OpenGL','SQL','Web Apps'];
+const words=['Next.js','Flutter','PHP','Kotlin','Android','MySQL','Python','Machine Learning','Computer Vision','OpenGL','SQL','Web Apps'];
 const mqHTML=words.map((w,i)=>`<span class="${i%3===0?'f':''}">${w}</span><span class="sep">✦</span>`).join('');
 $('#mq').innerHTML=mqHTML+mqHTML;
 const shots=projects.filter(p=>p.img||p.svg);
@@ -989,7 +1019,7 @@ form.addEventListener('submit',e=>{
   new IntersectionObserver(es=>es.forEach(e=>{inView=e.isIntersecting;update()}),{threshold:.35}).observe(car);
 
   $('#feat-tot').textContent=String(slides.length).padStart(2,'0');
-  tabs.innerHTML=slides.map((s,i)=>`<button type="button" class="${s.classList.contains('blue')?'blue':''}" data-i="${i}"><span class="n">${String(i+1).padStart(2,'0')}</span>${s.dataset.name}</button>`).join('');
+  tabs.innerHTML=slides.map((s,i)=>`<button type="button" class="${['blue','green'].find(c=>s.classList.contains(c))||''}" data-i="${i}"><span class="n">${String(i+1).padStart(2,'0')}</span>${s.dataset.name}</button>`).join('');
   const go=i=>{i=clamp(i,0,slides.length-1);track.scrollTo({left:slides[i].offsetLeft-slides[0].offsetLeft,behavior:reduce?'auto':'smooth'})};
   const setCur=i=>{
     if(i===cur&&tabs.dataset.ready)return;cur=i;tabs.dataset.ready=1;
