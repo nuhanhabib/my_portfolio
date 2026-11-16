@@ -295,6 +295,14 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
 .spot-feat.blue{--c1:#2563eb;--c2:#7c5cff;--rgb:59,111,255;--soft:#a9c3ff;--tagc:#cfdcff;--bg1:#0c1636;--scr:#0f1a3d}
 .feat-tabs button.blue{--c1:#2563eb;--c2:#7c5cff}
 .spot-feat.green{--c1:#16a34a;--c2:#65a30d;--rgb:34,197,94;--soft:#a7f3c0;--tagc:#d1fae5;--bg1:#0b2414;--scr:#0f2a18}
+.spot-feat.amber{--c1:#f59e0b;--c2:#ea580c;--rgb:245,158,11;--soft:#fcd34d;--tagc:#fde68a;--bg1:#24170a;--scr:#14100a}
+.feat-tabs button.amber{--c1:#f59e0b;--c2:#ea580c}
+@media (min-width:960px){.spot-feat.wide{grid-template-columns:1fr 1fr}}
+.shotwin{border-radius:1rem;overflow:hidden;border:1px solid rgba(var(--rgb),.4);background:#0b0d14;box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 90px -25px rgba(var(--rgb),.55)}
+.shotwin .bar{display:flex;align-items:center;gap:.4rem;padding:.6rem .8rem;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.shotwin .bar i{width:.55rem;height:.55rem;border-radius:50%;background:#ff5f57}.shotwin .bar i:nth-child(2){background:#febc2e}.shotwin .bar i:nth-child(3){background:#28c840}
+.shotwin .bar span{margin-left:.6rem;font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.shotwin img{display:block;width:100%;height:auto}
 .feat-tabs button.green{--c1:#16a34a;--c2:#65a30d}
 .feat-tabs button{--c1:#7c3aed;--c2:#5b5bf0}
 .spot-feat{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;isolation:isolate;overflow:hidden;display:grid;gap:2.5rem;align-items:center;border-radius:var(--r-lg);border:1px solid rgba(var(--rgb),.32);padding:clamp(1.5rem,4.5vw,3.5rem);background:radial-gradient(40rem 26rem at 100% 0%,rgba(var(--rgb),.38),transparent 65%),radial-gradient(30rem 24rem at 0% 100%,rgba(87,144,230,.22),transparent 65%),linear-gradient(160deg,var(--bg1),#0b1022 60%,#0a0f1f)}
@@ -579,7 +587,29 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
     </div>
     <div class="feat-car reveal" id="feat-car" aria-roledescription="carousel" aria-label="Featured projects">
     <div class="feat-track" id="feat-track" tabindex="0">
-    <article class="spot-feat green" data-name="Khabo Ki?" aria-roledescription="slide" aria-label="1 of 3: Khabo Ki?">
+    <article class="spot-feat amber wide" data-name="StrataDB" aria-roledescription="slide" aria-label="1 of 4: StrataDB">
+      <div>
+        <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● Live</span><span class="tag">Database engine</span></div>
+        <h3>StrataDB <span class="emo" aria-hidden="true">🗄️</span></h3>
+        <p class="line">A SQL database engine written from scratch, running in your browser.</p>
+        <p class="desc">A relational database built by hand in TypeScript with zero libraries: SQL parser, query planner, B+tree indexes and transactions. The playground loads a 30,000-row dataset and shows not just the answer to a query, but how the engine got it.</p>
+        <ul class="feats">
+          <li><i aria-hidden="true">✍️</i>Hand-written lexer and recursive-descent parser</li>
+          <li><i aria-hidden="true">🧭</i>Query planner with predicate pushdown and hash joins</li>
+          <li><i aria-hidden="true">🌳</i>B+tree indexes you can watch split and merge</li>
+          <li><i aria-hidden="true">📊</i>Live query plan with per-operator timing</li>
+          <li><i aria-hidden="true">🔁</i>BEGIN, COMMIT and ROLLBACK transactions</li>
+          <li><i aria-hidden="true">🔗</i>Joins, GROUP BY, subqueries, CASE and EXPLAIN</li>
+        </ul>
+        <div class="stackline" aria-label="Tech stack"><span>TypeScript</span><span>Vite</span><span>Vitest</span><span>0 runtime dependencies</span><span>GitHub Actions CI</span></div>
+        <div class="ctas">
+          <a class="btn acc" href="https://nuhanhabib.github.io/stratadb/" target="_blank" rel="noopener">Try the live playground <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <a class="btn ghost" href="https://github.com/nuhanhabib/stratadb" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>Source on GitHub</a>
+        </div>
+      </div>
+      <div class="shotwin"><div class="bar"><i></i><i></i><i></i><span>nuhanhabib.github.io/stratadb</span></div><img src="img/stratadb.webp" alt="StrataDB playground showing a SQL query and its executed query plan" loading="lazy"></div>
+    </article>
+    <article class="spot-feat green" data-name="Khabo Ki?" aria-roledescription="slide" aria-label="2 of 4: Khabo Ki?">
       <div>
         <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● New</span><span class="tag">Android app · AI</span></div>
         <h3>Khabo Ki? <span class="emo" aria-hidden="true">🍎</span></h3>
@@ -609,7 +639,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
         <div class="float-chip r" aria-hidden="true"><b>2</b>languages</div>
       </div>
     </article>
-    <article class="spot-feat" data-name="DozyPal" aria-roledescription="slide" aria-label="2 of 3: DozyPal">
+    <article class="spot-feat" data-name="DozyPal" aria-roledescription="slide" aria-label="3 of 4: DozyPal">
       <div>
         <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● New</span><span class="tag">Android app</span></div>
         <h3 id="dozy-title">DozyPal <span class="emo" aria-hidden="true">😴</span></h3>
@@ -639,7 +669,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
         <div class="float-chip r" aria-hidden="true"><b>4</b>apps tracked</div>
       </div>
     </article>
-    <article class="spot-feat blue" data-name="SafeVault" aria-roledescription="slide" aria-label="3 of 3: SafeVault">
+    <article class="spot-feat blue" data-name="SafeVault" aria-roledescription="slide" aria-label="4 of 4: SafeVault">
       <div>
         <div class="tags"><span class="tag star">★ Featured project</span><span class="tag new">● Live</span><span class="tag">Web app · PWA</span></div>
         <h3 id="vault-title">SafeVault <span class="emo" aria-hidden="true">🔐</span></h3>
@@ -819,6 +849,7 @@ $$('[data-socials]').forEach(box=>{
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
 const CATS={mobile:'Android',web:'Web apps',ai:'AI & Research',games:'Games & 3D',desktop:'Desktop'};
 const projects=[
+  {n:'StrataDB',c:'web',f:1,st:'TypeScript · 0 deps',url:'nuhanhabib.github.io/stratadb',d:'A SQL database engine written from scratch: parser, query planner, B+tree indexes and transactions, with a live query-plan visualiser running in the browser.',h:'https://github.com/nuhanhabib/stratadb',img:'img/stratadb.webp'},
   {n:'Khabo Ki?',c:'mobile',f:1,st:'Flutter · Gemini AI',url:'Khabo Ki? · Android app',d:'An AI food detective for Bangladesh: snap a photo and get a 0–100 safety score, freshness, nutrition and a budget tip, in English and Bangla. Grew out of our Ideathon 2025 finalist idea.',h:'https://github.com/nuhanhabib/khabo-ki',img:'img/khaboki.webp'},
   {n:'DozyPal',c:'mobile',f:1,st:'Kotlin · Android',url:'DozyPal · Android app',d:'A free, open-source Android app that counts the reels you watch, with a sleepy character, daily limits, reports and Scroll Battles with friends.',h:'https://github.com/nuhanhabib/DozyPal',img:'img/dozypal.webp'},
   {n:'SafeVault',c:'web',f:1,st:'JavaScript · Web Crypto · PWA',url:'nuhanhabib.github.io/safevault',d:'An installable, zero-knowledge password manager: AES-256-GCM encryption on your device, one master password, auto-lock and private sync through your own Google Drive.',h:'https://github.com/nuhanhabib/safevault',img:'img/safevault.webp'},
@@ -995,7 +1026,8 @@ form.addEventListener('submit',e=>{
   const MUTED='<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/>',LOUD='<path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>';
   let cur=0,inView=false,userPaused=reduce;
   const phones=slides.map(sl=>{
-    const ph=$('.phone',sl),v=$('video',ph),snd=$('.snd',ph);
+    const ph=$('.phone',sl);if(!ph)return null;
+    const v=$('video',ph),snd=$('.snd',ph);
     const sync=()=>ph.classList.toggle('paused',v.paused);
     v.addEventListener('play',sync);v.addEventListener('pause',sync);sync();
     const play=()=>{const p=v.play();p&&p.catch(()=>{})};
@@ -1009,18 +1041,18 @@ form.addEventListener('submit',e=>{
     return {v,play};
   });
   // only the visible slide's video plays, and only while the carousel is on screen
-  const update=()=>phones.forEach((p,i)=>{if(i===cur&&inView&&!userPaused)p.play();else p.v.pause()});
+  const update=()=>phones.forEach((p,i)=>{if(!p)return;if(i===cur&&inView&&!userPaused)p.play();else p.v.pause()});
   new IntersectionObserver(es=>es.forEach(e=>{inView=e.isIntersecting;update()}),{threshold:.35}).observe(car);
 
   $('#feat-tot').textContent=String(slides.length).padStart(2,'0');
-  tabs.innerHTML=slides.map((s,i)=>`<button type="button" class="${['blue','green'].find(c=>s.classList.contains(c))||''}" data-i="${i}"><span class="n">${String(i+1).padStart(2,'0')}</span>${s.dataset.name}</button>`).join('');
+  tabs.innerHTML=slides.map((s,i)=>`<button type="button" class="${['blue','green','amber'].find(c=>s.classList.contains(c))||''}" data-i="${i}"><span class="n">${String(i+1).padStart(2,'0')}</span>${s.dataset.name}</button>`).join('');
   const go=i=>{i=clamp(i,0,slides.length-1);track.scrollTo({left:slides[i].offsetLeft-slides[0].offsetLeft,behavior:reduce?'auto':'smooth'})};
   const setCur=i=>{
     if(i===cur&&tabs.dataset.ready)return;cur=i;tabs.dataset.ready=1;
     $$('button',tabs).forEach((b,j)=>b.setAttribute('aria-current',String(j===i)));
     $('#feat-cur').textContent=String(i+1).padStart(2,'0');
     $('#feat-prev').disabled=i===0;$('#feat-next').disabled=i===slides.length-1;
-    phones.forEach((p,j)=>{if(j!==i&&!p.v.muted)$('.snd',slides[j]).click()}); // never leave sound on in a hidden slide
+    phones.forEach((p,j)=>{if(p&&j!==i&&!p.v.muted)$('.snd',slides[j]).click()}); // never leave sound on in a hidden slide
     update();
   };
   tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)});
