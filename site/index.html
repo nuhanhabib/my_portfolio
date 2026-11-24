@@ -407,6 +407,12 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
 .club .ico{font-family:var(--mono);font-size:.75rem;color:var(--brand-hi)}
 .club h3{font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:-.015em;margin-top:.8rem}
 .club span{display:block;font-size:.8rem;color:var(--muted);margin-top:.25rem}
+.club .steps{margin-top:1rem;display:grid;gap:.85rem;border-left:1px solid var(--line-2);padding-left:1rem}
+.club .steps li{position:relative}
+.club .steps li::before{content:"";position:absolute;left:calc(-1rem - 4px);top:.45em;width:7px;height:7px;border-radius:50%;background:var(--brand)}
+.club .steps b{display:block;font-weight:500;font-size:.92rem}
+.club .steps em{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.15rem}
+.club .steps p{margin-top:.35rem;font-size:.85rem}
 .club p{font-size:.9rem;color:var(--ink-2);margin-top:.8rem}
 
 /* ---------- contact ---------- */
@@ -844,11 +850,11 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
     <ul class="roles">
       <li class="role reveal"><span class="when now">● Oct 2026 — Present</span><h3>Infusions Tech<small>Executive Officer Intern</small></h3><p>Supporting engineering operations by coordinating technical tasks, monitoring project progress, maintaining documentation and helping with internal reporting.</p></li>
       <li class="role reveal"><span class="when">Jan — Apr 2026</span><h3>ZENTORRA<small>Technical Coordinator Intern</small></h3><p>Coordinated technical tasks and project workflows, kept daily requirement and progress documentation, and handled internal reporting.</p></li>
-      <li class="role reveal"><span class="when">Apr 2023 — Jan 2024</span><h3>10 Minute School<small>Affiliate, Digital Marketing</small></h3><p>Promoted online courses through digital content and outreach, building persuasion and community-engagement skills.</p></li>
+      <li class="role reveal"><span class="when">Apr 2023 — Jan 2024</span><h3>10 Minute School<small>Affiliate · Part-time, remote</small></h3><p>Created content and communicated the value of their online courses to my network, building persuasion, communication and digital marketing skills.</p></li>
     </ul>
     <div class="clubs">
-      <article class="club reveal"><span class="ico">{ code }</span><h3>BRAC University Computer Club</h3><span>General Member · Mar 2022 — Oct 2024</span><p>Took part in programming activities, tech events, workshops and skill-development sessions.</p></article>
-      <article class="club reveal"><span class="ico">[ robots ]</span><h3>Robotics Club of BRAC University</h3><span>General Member · Oct 2022 — Jan 2024</span><p>Hands-on robotics practice sessions and technology-focused events.</p></article>
+      <article class="club reveal"><span class="ico">{ code }</span><h3>BRAC University Computer Club</h3><span>Part-time · Mar 2022 — Aug 2024</span><ul class="steps"><li><b>Senior Executive</b><em>Feb 2023 — Aug 2024</em><p>Organized programming competitions, technical workshops and club events, and supported team coordination and member engagement.</p></li><li><b>Junior Executive</b><em>Jul 2022 — Feb 2023</em><p>Helped organize coding sessions, technical events and workshops with the team.</p></li><li><b>Board Member</b><em>Mar 2022 — Jul 2022</em><p>Supported club activities, event planning and programming initiatives.</p></li></ul></article>
+      <article class="club reveal"><span class="ico">[ robots ]</span><h3>Robotics Club of BRAC University</h3><span>Part-time · Oct 2022 — Jan 2024</span><ul class="steps"><li><b>Junior Executive</b><em>Apr 2023 — Jan 2024</em><p>Helped organize robotics workshops, technical events and hands-on learning sessions, and supported club operations.</p></li><li><b>Board Member</b><em>Oct 2022 — Apr 2023</em><p>Took part in robotics activities, technical workshops and club initiatives.</p></li></ul></article>
       <article class="club reveal"><span class="ico">( case )</span><h3>CaseSpecs 3.0 (Spectrum)</h3><span>Participant · Inter-university case competition</span><p>Analyzed real-world business problems and presented strategic solutions.</p></article>
     </div>
   </div>
@@ -953,8 +959,8 @@ const projects=[
 const journey=[
   {y:'2018',t:'foundation',h:'SSC · GPA 5.00',d:'Finished secondary school in science at Comilla Zilla School with a perfect GPA.'},
   {y:'2020',t:'foundation',h:'HSC · GPA 5.00',d:'Higher secondary in science at Comilla Shikha Board Govt Model College, again with 5.00.'},
-  {y:'2022',t:'learning',h:'Started CSE at BRAC',d:'Began Computer Science and Engineering and joined the BRAC University Computer Club.'},
-  {y:'2023',t:'exploring',h:'Robotics & first job',d:'Robotics Club sessions, and my first role as a digital marketing affiliate at 10 Minute School.'},
+  {y:'2022',t:'learning',h:'Started CSE at BRAC',d:'Began Computer Science and Engineering, joined the Computer Club board and later the Robotics Club.'},
+  {y:'2023',t:'exploring',h:'Leading club events',d:'Senior Executive at the Computer Club, Junior Executive at the Robotics Club, and my first job as a 10 Minute School affiliate.'},
   {y:'2025',t:'building',h:'Ideathon finalist',d:'Our AI food-safety concept, Khabo Ki?, reached the Next Gen Ideathon finals.'},
   {y:'2026',t:'shipping',h:'Intern & graduate',d:'Technical Coordinator Intern at ZENTORRA, then graduated with my thesis defended.'},
   {y:'Now',t:'HEAD',h:'Infusions Tech',d:'Executive Officer Intern since Oct 2026, supporting engineering operations.',head:1}
