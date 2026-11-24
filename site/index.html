@@ -345,6 +345,26 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
 .phone .float-chip.r{left:auto;right:-2rem;top:auto;bottom:24%}
 @media (max-width:520px){.phone .float-chip{left:-.5rem}.phone .float-chip.r{right:-.5rem}}
 
+/* ---------- research ---------- */
+.research{padding-block:clamp(5rem,10vw,8rem);border-top:1px solid var(--line)}
+.papers{display:grid;gap:1.5rem;margin-top:3rem}
+.paper{display:grid;gap:2rem;align-items:center;border-radius:var(--r-lg);border:1px solid var(--line-2);background:linear-gradient(180deg,var(--card-2),var(--card));padding:clamp(1.25rem,3.5vw,2.5rem)}
+@media (min-width:900px){.paper{grid-template-columns:.9fr 1.1fr}}
+.paper .fig{border-radius:var(--r);overflow:hidden;border:1px solid var(--line-2);background:#fff}
+.paper .fig img{display:block;width:100%;height:auto}
+.paper .fig.dark{background:#0a1020}
+.paper .meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.paper .meta span{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line-2);border-radius:var(--pill);padding:.35rem .75rem;color:var(--ink-2)}
+.paper .meta span.k{border-color:rgba(87,144,230,.5);color:var(--brand-hi)}
+.paper h3{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,2.8vw,2.2rem);letter-spacing:-.025em;line-height:1.1;margin-top:1rem}
+.paper .q{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--brand-hi);margin-top:.6rem}
+.paper p.d{color:var(--ink-2);margin-top:1rem}
+.paper ul{margin-top:1rem;display:grid;gap:.45rem}
+.paper li{position:relative;padding-left:1.1rem;font-size:.93rem;color:var(--ink)}
+.paper li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:.4rem;border-radius:50%;background:var(--brand)}
+.paper .stackline{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem}
+.paper .stackline span{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);background:rgba(255,255,255,.04);border:1px solid var(--line-2);border-radius:.5rem;padding:.3rem .6rem}
+
 /* ---------- skills ---------- */
 .skills{padding-block:clamp(5rem,10vw,8rem);border-top:1px solid var(--line)}
 .skills-grid{display:grid;gap:2rem;margin-top:3rem}
@@ -450,6 +470,7 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
       <a href="#about">About</a>
       <a href="#journey">Journey</a>
       <a href="#work">Work</a>
+      <a href="#research">Research</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
     </nav>
@@ -464,9 +485,10 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
     <a href="#about"><small>01</small>About</a>
     <a href="#journey"><small>02</small>Journey</a>
     <a href="#work"><small>03</small>Work</a>
-    <a href="#skills"><small>04</small>Skills</a>
-    <a href="#experience"><small>05</small>Experience</a>
-    <a href="#contact"><small>06</small>Contact</a>
+    <a href="#research"><small>04</small>Research</a>
+    <a href="#skills"><small>05</small>Skills</a>
+    <a href="#experience"><small>06</small>Experience</a>
+    <a href="#contact"><small>07</small>Contact</a>
   </nav>
   <div class="socials" data-socials></div>
 </div>
@@ -738,6 +760,46 @@ body.menu-open .burger i:last-child{transform:translateY(-3.25px) rotate(-45deg)
   </div>
 </section>
 
+<!-- ================= RESEARCH ================= -->
+<section class="research" id="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <span class="eyebrow"><span class="c">//</span> Research experience</span>
+    <h2 class="h-xl reveal" id="research-title" style="margin-top:1rem">Research I've <span class="serif">done.</span></h2>
+    <div class="papers">
+      <article class="paper reveal">
+        <figure class="fig"><img src="img/xai.webp" alt="Heatmap of explanation agreement between pairs of machine learning models" loading="lazy"></figure>
+        <div>
+          <div class="meta"><span class="k">Independent research</span><span>2026</span><span>Explainable AI</span></div>
+          <h3>Same Accuracy, Different Reasons</h3>
+          <p class="q">Do equally accurate models agree on why they predict what they do?</p>
+          <p class="d">A study of explanation disagreement across machine learning models that perform almost the same on tabular data. I trained five model types on 22 OpenML datasets with three random seeds each, explained every model with SHAP, and measured how far their explanations agree.</p>
+          <ul>
+            <li>Models with nearly the same accuracy often point to different top features: cross-model top-5 overlap averaged 0.62, against 0.84 between seeds of the same model</li>
+            <li>Disagreement varies widely by dataset, and I tested which dataset properties explain it</li>
+            <li>Synthetic experiments and robustness checks back up the main findings</li>
+          </ul>
+          <div class="stackline"><span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>SHAP</span><span>Statistics</span></div>
+        </div>
+      </article>
+      <article class="paper reveal">
+        <figure class="fig dark"><img src="img/crowd.webp" alt="Crowd photo, detected people and the resulting density heat map" loading="lazy"></figure>
+        <div>
+          <div class="meta"><span class="k">Undergraduate thesis</span><span>BRAC University</span><span>Computer Vision</span></div>
+          <h3>Crowd Density Estimation</h3>
+          <p class="q">How many people are in this crowd, and where are they packed tightest?</p>
+          <p class="d">With my thesis team, I built a deep learning pipeline that turns a crowd photo into a density map and a head count, for real-time crowd monitoring. The thesis was completed and defended.</p>
+          <ul>
+            <li>CSRNet++ backbone with CBAM attention to focus on crowded regions</li>
+            <li>Produces density heat maps that show where people are concentrated</li>
+            <li>Built for real-time use in crowd safety and monitoring</li>
+          </ul>
+          <div class="stackline"><span>Python</span><span>Deep learning</span><span>CSRNet++</span><span>CBAM attention</span><span>Computer vision</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SKILLS ================= -->
 <section class="skills" id="skills" aria-labelledby="skills-title">
   <div class="wrap">
@@ -880,7 +942,6 @@ const projects=[
   {n:'SafeVault',c:'web',f:1,st:'JavaScript · Web Crypto · PWA',url:'nuhanhabib.github.io/safevault',d:'An installable, zero-knowledge password manager: AES-256-GCM encryption on your device, one master password, auto-lock and private sync through your own Google Drive.',h:'https://github.com/nuhanhabib/safevault',img:'img/safevault.webp'},
   {n:'AltaFit',c:'web',st:'Next.js · React · Tailwind',url:'altafit · gym website',d:'A multi-page gym website built from a Figma design: classes, gallery, membership plans, mentors and a free-trial booking form. Built with Next.js 16, React 19 and Tailwind CSS 4.',h:'https://github.com/nuhanhabib/Gym-Fitness-Website',img:'img/altafit.webp'},
   {n:'ReadSphere',c:'web',st:'PHP · MySQL',url:'localhost/readsphere',d:'A book-community web app with a library, book clubs, a personal bookshelf, reading goals and recommendations.',h:'https://github.com/nuhanhabib/ReadSphere-project',img:'img/readsphere.webp'},
-  {n:'Crowd Density Estimation',c:'ai',f:1,st:'Python · CV',d:'Undergraduate thesis: a CSRNet++ pipeline with CBAM attention that produces real-time crowd density maps.',h:null,img:'img/crowd.webp'},
   {n:'Inventory Management System',c:'web',st:'PHP · MySQL',url:'localhost/inventory',d:'A dashboard for stock in and out, suppliers, reports and low-stock alerts, with searchable inventory tables.',h:'https://github.com/nuhanhabib/inventory-management-project',img:'img/inventory.webp'},
   {n:'The Modern Barber',c:'web',st:'PHP · HTML/CSS',url:'localhost/modern-barber',d:'A barbershop website with services, barbers, products and online appointment booking by date, time and barber.',h:'https://github.com/nuhanhabib/the-modern-barber-project',img:'img/barber.webp'},
   {n:'Counter King',c:'games',st:'Python · PyOpenGL',url:'counter_king.py',d:'A 3D siege defense game with procedural weather, automated intro sequences and dynamic perspective switching.',h:'https://github.com/nuhanhabib/Counter_King_Game',img:'img/counterking.webp'},
@@ -988,7 +1049,7 @@ const hero=$('.hero'),spot=$('#spot');
 hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();spot.style.left=(e.clientX-r.left)+'px';spot.style.top=(e.clientY-r.top)+'px'});
 
 /* ------------------------------------------------------------------ scroll: progress, header, counter, mission */
-const sections=['top','about','journey','work','skills','experience','contact'].map(id=>document.getElementById(id));
+const sections=['top','about','journey','work','research','skills','experience','contact'].map(id=>document.getElementById(id));
 $('#count-tot').textContent=String(sections.length).padStart(2,'0');
 const navLinks=$$('.nav a');
 function onScroll(){
